@@ -11,6 +11,7 @@
             <fieldset class="form-group">
               <input class="form-control form-control-lg"
                 formControlName="title"
+                id="title"
                 type="text"
                 placeholder="Article Title" />
             </fieldset>
@@ -18,6 +19,7 @@
             <fieldset class="form-group">
               <input class="form-control"
                 formControlName="description"
+                id="description"
                 type="text"
                 placeholder="What's this article about?" />
             </fieldset>
@@ -25,6 +27,7 @@
             <fieldset class="form-group">
               <textarea class="form-control"
                 formControlName="body"
+                id="body"
                 rows="8"
                 placeholder="Write your article (in markdown)">
               </textarea>
@@ -33,6 +36,7 @@
             <fieldset class="form-group">
               <input class="form-control"
                 type="text"
+                id="tags"
                 placeholder="Enter tags"
                 [formControl]="tagField"
                 (keyup.enter)="addTag()" />
@@ -46,7 +50,7 @@
               </div>
             </fieldset>
 
-            <button class="btn btn-lg pull-xs-right btn-primary" type="button" (click)="submitForm()">
+            <button class="btn btn-lg pull-xs-right btn-primary" id="publish" type="button" (click)="submitForm()">
               Publish Article
             </button>
 
